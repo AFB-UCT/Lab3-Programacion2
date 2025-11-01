@@ -1,15 +1,18 @@
 # Crear una Funcion Generadora que genere la serie de fibonacci hasta el decimo elemento usando yield 
-#resultados esperados: 1,1,2,3,5,8,12,21,34,55
-# F(n)= F(n-1) + F(n-2)
-# Y si hago un producto con n-1, otro con n-2 y luego los sumo?
 
+
+# para la funcion de Fibonacci empieza con los numeros a=0 y b=1
 def Fibonacci(n):
-    for i in range(n):
-        i += 0
-        if Fibonacci(i-1) + Fibonacci(i-2):
-            yield i
+    a, b = 0, 1
+    # Por la cantidad de veces que coloces en el n, en este caso 10
+    for n in range(n):
+        # Me almacenaras y guardaras el resultado esperado (1, 1 ,2 , 3, 5...)
+        yield b
+        # Seguido de eso ese resultado almacenado se sumara con otro termino conformado por si mismo y editara y almacenara ese nuevo termino a la A 
+        # De esta forma seguira dando diferentes resultados con diferentes datos almacenados hasta que cumpla el range(n)
+        a, b = b, a + b
 
 
 
-for f in Fibonacci(10):
-    print(f)
+for numero in Fibonacci(10):
+    print(numero)
