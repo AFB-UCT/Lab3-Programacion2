@@ -10,7 +10,6 @@ class Cuadrado:
         self.n=n
 
     def __iter__(self):
-        
         for i in range(1, self.n + 1):
             yield i**2
         
